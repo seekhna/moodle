@@ -1,0 +1,91 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_bandeau/page-header-tools
+    page header tools.
+}}
+<div class="bandeau-page-header-tools" id="bandeau-page-header-tools">
+    <div id="scroll_top">
+        <a class="nav-link scroll_top_link" href="#" onclick="topFunction()" title="{{#str}}back_top, theme_bandeau{{/str}}"><i class="material-icons">arrow_upward</i></a>
+        {{^links}}
+            <a class="home-link" href='{{{courseurl}}}' style="width: 60px; height: 45px; padding: .5rem 1rem;" title="{{#str}}home_course, theme_bandeau{{/str}}"><i class="material-icons">school</i> </a>
+        {{/links}}
+        <span class="navbar-brand p-l-2"><a title="{{#str}}title_courseurl, theme_bandeau{{/str}}" href="{{{courseurl}}}" class="sticky-title" >{{coursename}}</a></span>
+    </div>
+    <ul class="nav nav-tabs">
+        {{#links}}
+            {{^href}}
+                <li class="nav-item">
+                    <a class="nav-link" href="#bandeau_tab_{{index}}" data-toggle="tab" role="tab" aria-expanded="false">{{{content}}}</a>
+                </li>
+            {{/href}}
+            {{#direct}}
+                <li class="nav-item {{#edit}}ml-auto{{/edit}} ">
+                    <a class="nav-link {{class}}" href="{{{href}}}">{{{content}}}{{#image}} {{#pix}} {{image}} , theme_bandeau {{/pix}} {{/image}}</a>
+                </li>
+            {{/direct}}
+        {{/links}}
+    </ul>
+
+    <div class="tab-content">
+        {{#contents}}
+        <div class="tab-pane" id="bandeau_tab_{{index}}" role="tabpanel" aria-expanded="false">
+            {{{content}}}
+        </div>
+        {{/contents}}
+    </div>
+</div>
+<script>
+    window.onscroll = function() { updateSticky() };
+
+    var navbar = document.getElementById("bandeau-page-header-tools");
+    var sticky = navbar.offsetTop-50;
+
+    /**
+    Function to update sticky class on navbar if we scroll.
+    */
+    function updateSticky() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+    /** 
+    Function to return to the top of the page
+    */
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    window.onload = function () {
+        $('#bandeau-page-header-tools a[role="tab"]').click(function (e) {
+            if($(this).hasClass('active')){
+                e.preventDefault();
+                e.stopPropagation();
+                $( $(this).attr('href') ).removeClass('active').removeClass('show');
+                $(this).removeClass('active').removeClass('show');
+            }
+            else {
+                $(this).tab('show');
+            }
+        });
+    }
+</script>
+
