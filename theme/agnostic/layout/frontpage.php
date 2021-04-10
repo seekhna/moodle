@@ -51,7 +51,7 @@ echo $OUTPUT->doctype() ?>
     require_once(dirname(__FILE__) . '/includes/header.php');
     echo $headerlayout;
     ?>
-<!--E.O.Custom theme header-->
+
 <link rel="stylesheet" href="<?php echo theme_agnostic_theme_url(); ?>/style/slick.css" />
 
 <?php
@@ -85,9 +85,9 @@ if ($toggleslideshow == 1) {
     ?>
         <div id="<?php echo $regionbsid ?>" class="<?php echo $sidepreclass; ?>">
             <?php
-                echo $OUTPUT->course_content_header();
+                // echo $OUTPUT->course_content_header();
                 echo $OUTPUT->main_content();
-               echo $OUTPUT->course_content_footer();
+                // echo $OUTPUT->course_content_footer();
             ?>
         </div>
         <?php echo $OUTPUT->blocks('side-pre', 'col-md-3'); ?>
@@ -97,7 +97,7 @@ if ($toggleslideshow == 1) {
 
 </div>
 
- <script src="<?php echo theme_agnostic_theme_url(); ?>/javascript/slick.js"></script>
+<script src="<?php echo theme_agnostic_theme_url(); ?>/javascript/slick.js"></script>
 <script>
 $( function() {
 
@@ -141,7 +141,6 @@ $( function() {
     require_once(dirname(__FILE__) . '/includes/footer.php');
     echo $footerlayout;
 ?>
-<!--E.O.Custom theme footer-->
 
 </body>
 </html>

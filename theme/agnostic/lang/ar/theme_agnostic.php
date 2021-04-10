@@ -154,8 +154,7 @@ $string['slideurltextdesc'] = 'For ex: lang:display or Displayأدخل الوج�
 $string['termsofuse'] = 'شروط الاستخدام';
 $string['faq'] = 'التعليمات';
 $string['support'] = 'الدعم';
-$string['copyright'] = '<P الطبقة = "نص الوسط"> حقوق الطبع والنشر والنسخ. 2015 - وضعت من قبل
-             <a href="http://www.agnosy.org/"> agnosy.org </A> . Powered من خلال <a href="https://moodle.org"> موودل </A> </ P>';
+$string['copyright'] = '<p class = "text-center">Copyright &copy; 2,021 - agnostic foundation.</ p>';
 $string['footeremail'] = 'البريد الإلكتروني:';
 $string['lavender'] = "الخزامي";
 $string['dark_cyan'] = "سماوي الظلام";

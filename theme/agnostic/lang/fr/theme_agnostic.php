@@ -162,6 +162,5 @@ soit clé de langue ou de texte.For ex: lang:display or Display';
 $string['termsofuse'] = 'Conditions d\'utilisation';
 $string['faq'] = 'FAQ';
 $string['support'] = 'Soutien';
-$string['copyright'] = '<p class = "text-center"> Copyright & copy; 2,015 - Développé par
-             <a href="http://www.agnosy.org/"> agnosy.org </a> . Powered par <a href="https://moodle.org"> Moodle </a> </ p>';
+$string['copyright'] = '<p class = "text-center">Copyright &copy; 2,021 - agnostic foundation.</ p>';
 $string['footeremail'] = 'courriel:';

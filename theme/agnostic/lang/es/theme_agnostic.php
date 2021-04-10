@@ -157,6 +157,5 @@ cualquiera de las teclas idioma o Text.For ex: lang:display or Display';
 $string['termsofuse'] = 'Condiciones de uso';
 $string['faq'] = 'PF';
 $string['support'] = 'apoyo';
-$string['copyright'] = '<p class = "text-center"> Derechos de autor y copia; 2015 - Desarrollado por
-             <a href="http://www.agnosy.org/"> agnosy.org </a> . Powered por <a href="https://moodle.org"> Moodle </a> </ p>';
+$string['copyright'] = '<p class = "text-center"> Derechos de autor y copia; 2021 - agnostic foundation.</ p>';
 $string['footeremail'] = 'Correo:';

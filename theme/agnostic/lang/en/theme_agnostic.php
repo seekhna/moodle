@@ -163,8 +163,7 @@ $string['termsofuse'] = 'Terms of use';
 $string['faq'] = 'FAQ';
 $string['support'] = 'Support';
 $string['copyright'] = 'Copyright';
-$string['copyright_default'] = '<p class="text-center">Copyright &copy; 2021 - Developed by
-            <a href="http://agnosy.org/">agnosy</a>. Powered by <a href="https://moodle.org">Moodle</a></p>';
+$string['copyright_default'] = '<p class="text-center">Copyright &copy; 2021 - agnostic foundation.</p>';
 $string['footeremail'] = 'E-mail:';
 $string['lavender'] = "Lavender";
 $string['dark_cyan'] = "Dark Cyan";
